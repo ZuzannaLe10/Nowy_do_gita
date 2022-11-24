@@ -4,11 +4,12 @@
 using namespace std;
 int main()
 {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     vector<int> my_wektor;
     int temp = 0;
+    int i = 0;
     fstream plik;
     plik.open("boki_a.txt");
-    int i = 0;
     if (plik.is_open())
     {
         while (!plik.eof())
@@ -20,11 +21,11 @@ int main()
 
         for (int i = 0; i < my_wektor.size(); i++)
         {
-            cout << "A wynosi: " << my_wektor[i] << endl;
+            cout << "A wynosi: " << my_wektor[i] << endl;//wyswietla wartosci z plikow
         }
     }
     plik.close();
-
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     vector<int> my_wektor2;
     fstream plik2;
     plik2.open("boki_b.txt");
@@ -39,11 +40,11 @@ int main()
 
         for (int i = 0; i < my_wektor2.size(); i++)
         {
-            cout << "B wynosi: " << my_wektor2[i] << endl;
+            cout << "B wynosi: " << my_wektor2[i] << endl;//wyswietla wartosci z plikow
         }
     }
     plik2.close();
-
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     int pole;
     int obwod;
 
@@ -53,14 +54,14 @@ int main()
     {
         for (int i = 0; i < my_wektor2.size(); i++)
         {
-            pole = my_wektor[i] * my_wektor2[i];
-            wynik << i << " Pole wynosi: " << pole << endl;
+            pole = my_wektor[i] * my_wektor2[i];//pole
+            wynik << i << " Pole wynosi: " << pole << endl;//wyswietlanie wyniku w osobnym pliku
         }
 
         for (int i = 0; i < my_wektor2.size(); i++)
         {
-            obwod = (2 * my_wektor[i]) + (2 * my_wektor2[i]);
-            wynik << i << " Obwod wynosi: " << obwod << endl;
+            obwod = (2 * my_wektor[i]) + (2 * my_wektor2[i]);//obwod
+            wynik << i << " Obwod wynosi: " << obwod << endl;//wyswietlanie wyniku w osobnym pliku
         }
     }
     wynik.close();

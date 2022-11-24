@@ -1,4 +1,4 @@
-0 Pole wynosi: 10
-1 Pole wynosi: 12
-0 Obwod wynosi: 14
-1 Obwod wynosi: 16
+0 Pole: 10
+1 Pole: 12
+0 Obwod: 14
+1 Obwod: 16

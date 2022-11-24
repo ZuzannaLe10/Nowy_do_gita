@@ -7,7 +7,7 @@ int main()
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     vector<int> my_wektor;
     int temp = 0;
-    int i = 0;
+    int j = 0;
     fstream plik;
     plik.open("boki_a.txt");
     if (plik.is_open())
@@ -16,12 +16,12 @@ int main()
         {
             plik >> temp;
             my_wektor.push_back(temp);
-            i++;
+            j++;
         }
 
         for (int i = 0; i < my_wektor.size(); i++)
         {
-            cout << "A wynosi: " << my_wektor[i] << endl;//wyswietla wartosci z plikow
+            cout << my_wektor[i] << endl;//wyswietla wartosci z plikow
         }
     }
     plik.close();
@@ -35,12 +35,12 @@ int main()
         {
             plik2 >> temp;
             my_wektor2.push_back(temp);
-            i++;
+            j++;
         }
 
         for (int i = 0; i < my_wektor2.size(); i++)
         {
-            cout << "B wynosi: " << my_wektor2[i] << endl;//wyswietla wartosci z plikow
+            cout << my_wektor2[i] << endl;//wyswietla wartosci z plikow
         }
     }
     plik2.close();
@@ -55,13 +55,13 @@ int main()
         for (int i = 0; i < my_wektor2.size(); i++)
         {
             pole = my_wektor[i] * my_wektor2[i];//pole
-            wynik << i << " Pole wynosi: " << pole << endl;//wyswietlanie wyniku w osobnym pliku
+            wynik << i << " Pole: " << pole << endl;//wyswietlanie wyniku w osobnym pliku
         }
 
         for (int i = 0; i < my_wektor2.size(); i++)
         {
             obwod = (2 * my_wektor[i]) + (2 * my_wektor2[i]);//obwod
-            wynik << i << " Obwod wynosi: " << obwod << endl;//wyswietlanie wyniku w osobnym pliku
+            wynik << i << " Obwod: " << obwod << endl;//wyswietlanie wyniku w osobnym pliku
         }
     }
     wynik.close();
